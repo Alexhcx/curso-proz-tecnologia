@@ -10,8 +10,8 @@ def calculadora (num_1, num_2, escolha):
     else:
         return 0
 
-print("o resultado da operação é",calculadora(10, 2, 1))
-print("o resultado da operação é",calculadora(14, 93, 2))
-print("o resultado da operação é",calculadora(31, 12, 3))
-print("o resultado da operação é",calculadora(90, 30, 4))
-print("o resultado da operação é",calculadora(10, 2, 5))    
+print("o resultado da operação é",calculadora(10, 2, 1))  # soma = 12
+print("o resultado da operação é",calculadora(14, 93, 2)) # subtração = 79
+print("o resultado da operação é",calculadora(31, 12, 3)) # multiplicação = 372
+print("o resultado da operação é",calculadora(90, 30, 4)) # divisão = 3
+print("o resultado da operação é",calculadora(10, 2, 5))  # 0  
