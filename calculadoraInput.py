@@ -24,8 +24,6 @@ def realizarOperacao(escolha, num1, num2):
     else:
         return "Essa opção não existe"
 
-
-
 print("Bem vindo a Calculadora, escolha a operação que deseja realizar:")
 print("1: Soma", "2: Subtração", "3: Multiplicação", "4: Divisão", "0: Sair", sep="\n")
 escolha = int(input("Digite o número: "))
