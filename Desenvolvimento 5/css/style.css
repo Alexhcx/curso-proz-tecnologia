@@ -90,9 +90,10 @@ section img:nth-child(2){
 
 .imagens{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
+
 }
 
 footer{
