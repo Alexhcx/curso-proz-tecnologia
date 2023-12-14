@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f0d1d;
+    color: #fff;
+}
+
+header span{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.4rem;
+    padding: 1rem 1rem 1rem 1rem;
+    font-weight: 900;
+}
+
+#navbar ol{
+    display: flex;
+    justify-content: flex-end;
+}
+
+li{
+    font-size: 1.6rem;
+    list-style: none;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+li:hover{
+    background-color: rgba(0, 255, 255, 0.24);
+    border-radius: 100rem;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 2rem 2rem 2rem;
+    background-color: rgba(127, 255, 212, 0.418);
+    ;
+}
+
+main h1{
+    font-size: 3rem;
+    padding: 1rem;
+    margin:1rem;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 1rem 1rem 1rem;
+    text-indent: 5rem;
+    font-size: 1.6rem;
+}
+
+section span p{
+    font-size: 1.6rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    text-align: justify;
+}
+
+section img{
+    width: 50%;
+    height: 50%;
+    padding: 1rem;
+    border-radius: 10rem;
+}
+
+section img:nth-child(2){
+    width: 46%;
+    height: 46%;
+}
+
+.imagens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0f0d1d;
+    color: #fff;
+    padding: 1rem 1rem 1rem 1rem;
+    border: 5px solid #414094;
+}
+
+footer h3{
+    font-size: 1.8rem;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+footer li{
+    color: #fff;
+    list-style-type: circle;
+}
