@@ -28,6 +28,6 @@ sectionTag.innerHTML=`
     <img src="https://www.saldaodainformatica.com.br/10012-medium_default/notebook-acer-aspire-5-a515-54-33en-intel-core-i3-10110u-armazenamento-256gb-ssd-nvme-x4-tela-156-windows-11.webp"></img>
     <p>${produto.descricao}</p>
     <p>R$ ${produto.preco}</p>
-<div>
+</div>
 `
 console.log(BodyHtml)
