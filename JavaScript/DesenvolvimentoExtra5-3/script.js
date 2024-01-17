@@ -4,17 +4,17 @@ produto = {
     preco: 1799.02
 };
 
-let BodyHtml = document.querySelector("body")
+let bodyHtml = document.querySelector("body")
 
 let headerTag = document.createElement("header")
 let tituloTag = document.createElement("h1")
 let mainTag = document.createElement("main")
 let sectionTag = document.createElement("section")
 
-BodyHtml.appendChild(headerTag)
+bodyHtml.appendChild(headerTag)
 headerTag.appendChild(tituloTag)
 
-BodyHtml.appendChild(mainTag)
+bodyHtml.appendChild(mainTag)
 mainTag.appendChild(sectionTag)
 
 tituloTag.id = 'titulo'
@@ -30,4 +30,4 @@ sectionTag.innerHTML=`
     <p>R$ ${produto.preco}</p>
 </div>
 `
-console.log(BodyHtml)
+console.log(bodyHtml)
