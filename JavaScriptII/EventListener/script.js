@@ -19,3 +19,4 @@ botao.addEventListener("click", ()=>{
     contagem += 1;
     numero.innerText = contagem;
 })
+

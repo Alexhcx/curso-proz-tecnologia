@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 60vh;
+}
+form {
+  width: 30%;
+  margin: 15% auto;
+  margin-bottom: 0;
+}
+form fieldset {
+  margin: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+form fieldset input {
+  width: 100%;
+  padding: 0.3rem;
+}
