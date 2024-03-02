@@ -1,0 +1,46 @@
+CREATE DATABASE empresa;
+
+CREATE TABLE Areas (
+    AreaID INT PRIMARY KEY,
+    Nome VARCHAR(255)
+);
+
+CREATE TABLE Funcionarios (
+    FuncionarioID INT PRIMARY KEY,
+    Nome VARCHAR(255),
+    AreaID INT,
+    FOREIGN KEY (AreaID) REFERENCES Areas(AreaID)
+);
+
+CREATE TABLE qtd_funcionarios (
+    AreaID INT PRIMARY KEY,
+    QuantidadeFuncionarios INT DEFAULT 0,
+    FOREIGN KEY (AreaID) REFERENCES Areas(AreaID)
+);
+
+INSERT INTO Areas (AreaID, Nome) VALUES
+(1, 'TI'),
+(2, 'Recursos Humanos'),
+(3, 'Marketing');
+
+INSERT INTO qtd_funcionarios (AreaID, QuantidadeFuncionarios) VALUES
+(1, 0),
+(2, 0),
+(3, 0);
+
+CREATE OR REPLACE FUNCTION atualiza_qtd_funcionarios()
+RETURNS TRIGGER AS $$
+BEGIN
+    UPDATE qtd_funcionarios
+    SET QuantidadeFuncionarios = QuantidadeFuncionarios + 1
+    WHERE AreaID = NEW.AreaID;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER AtualizaContagemAposInsercao
+AFTER INSERT ON Funcionarios
+FOR EACH ROW
+EXECUTE FUNCTION atualiza_qtd_funcionarios();
+
+INSERT INTO funcionarios VALUES (1, 'Alexandre', 1);
