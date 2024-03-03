@@ -1,0 +1,19 @@
+CREATE TABLE Vendas (
+    VendaID INT PRIMARY KEY,
+    DataVenda DATE,
+    ProdutoID INT,
+    Quantidade INT
+);
+
+CREATE OR REPLACE PROCEDURE GerarRelatorioDiario()
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    SELECT DataVenda, ProdutoID, SUM(Quantidade) as TotalComprado
+    FROM Vendas
+    GROUP BY DataVenda, ProdutoID
+    ORDER BY DataVenda DESC, ProdutoID;
+END;
+$$;
+
+CALL GerarRelatorioDiario();
