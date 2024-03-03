@@ -1,0 +1,18 @@
+CREATE TABLE Clientes (
+    ClienteID INT PRIMARY KEY,
+    Nome VARCHAR(255),
+    DataCadastro DATE
+);
+
+CREATE OR REPLACE FUNCTION soma_clientes_cadastrados(data_desejada DATE)
+RETURNS INTEGER AS $$
+DECLARE
+    total_clientes INTEGER;
+BEGIN
+    SELECT COUNT(*) INTO total_clientes
+    FROM Clientes
+    WHERE DataCadastro = data_desejada;
+
+    RETURN total_clientes;
+END;
+$$ LANGUAGE plpgsql;
